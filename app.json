@@ -1,0 +1,5 @@
+{
+  "port": 3000,
+  "host": "0.0.0.0",
+  "cookieSecret": "787e3f74-9835-47ec-ad11-1af1fa48d7d7"
+}
