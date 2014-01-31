@@ -1,7 +1,7 @@
 var loopback = require('loopback');
 var path = require('path');
 var https = require('https');
-var sslConfig = require('./ssl-config')
+var sslConfig = require('./ssl-config');
 var app = module.exports = loopback();
 var started = new Date();
 
