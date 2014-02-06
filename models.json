@@ -1,14 +1,12 @@
 {
   "email": {
-    "dataSource": "mail",
-    "public": false,
     "options": {
       "base": "Email"
-    }
+    },
+    "dataSource": "mail",
+    "public": false
   },
   "user": {
-    "dataSource": "db",
-    "public": true,
     "options": {
       "base": "User",
       "relations": {
@@ -18,39 +16,39 @@
           "foreignKey": "userId"
         }
       }
-    }
+    },
+    "dataSource": "db",
+    "public": true
   },
   "accessToken": {
-    "dataSource": "db",
-    "public": true,
     "options": {
       "base": "AccessToken"
-    }
+    },
+    "dataSource": "db",
+    "public": true
   },
   "application": {
-    "dataSource": "db",
-    "public": true,
     "options": {
       "base": "Application"
-    }
+    },
+    "dataSource": "db",
+    "public": true
   },
   "acl": {
-    "dataSource": "db",
-    "public": false,
     "options": {
       "base": "ACL"
-    }
+    },
+    "dataSource": "db",
+    "public": false
   },
   "roleMapping": {
-    "dataSource": "db",
-    "public": false,
     "options": {
       "base": "RoleMapping"
-    }
+    },
+    "dataSource": "db",
+    "public": false
   },
   "role": {
-    "dataSource": "db",
-    "public": false,
     "options": {
       "base": "Role",
       "relations": {
@@ -60,13 +58,37 @@
           "foreignKey": "roleId"
         }
       }
-    }
+    },
+    "dataSource": "db",
+    "public": false
   },
   "scope": {
-    "dataSource": "db",
-    "public": false,
     "options": {
       "base": "Scope"
-    }
+    },
+    "dataSource": "db",
+    "public": false
+  },
+  "note": {
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "author": {
+        "type": "string"
+      },
+      "content": {
+        "type": "string"
+      },
+      "created": {
+        "type": "date"
+      },
+      "modified": {
+        "type": "date"
+      }
+    },
+    "public": true,
+    "dataSource": "db",
+    "plural": "notes"
   }
 }
