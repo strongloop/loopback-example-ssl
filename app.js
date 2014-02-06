@@ -1,5 +1,6 @@
 var loopback = require('loopback');
 var path = require('path');
+var http = require('http');
 var https = require('https');
 var sslConfig = require('./ssl-config');
 var app = module.exports = loopback();
@@ -123,17 +124,26 @@ app.enableAuth();
  * (only if this module is the main module)
  */
 
-app.start = function() {
-  var options = {
-    key: sslConfig.privateKey,
-    cert: sslConfig.certificate
-  };
-
-  return https.createServer(options, app).listen(app.get('port'), function() {
-    var baseUrl = 'https://' + app.get('host') + ':' + app.get('port');
+app.start = function(httpOnly) {
+  if(httpOnly === undefined) {
+    httpOnly = process.env.HTTP;
+  }
+  var server = null;
+  if(!httpOnly) {
+    var options = {
+      key: sslConfig.privateKey,
+      cert: sslConfig.certificate
+    };
+    server = https.createServer(options, app);
+  } else {
+    server = http.createServer(app);
+  }
+  server.listen(app.get('port'), function() {
+    var baseUrl = (httpOnly? 'http://' : 'https://') + app.get('host') + ':' + app.get('port');
     app.emit('started', baseUrl);
     console.log('LoopBack server listening @ %s%s', baseUrl, '/');
   });
+  return server;
 };
 
 if(require.main === module) {
