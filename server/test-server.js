@@ -2,7 +2,7 @@
  * Run `node import.js` to import the test data into the db.
  */
 var async = require('async');
-var app = require('./app');
+var app = require('./server');
 var db = app.dataSources.db;
 
 var notes = [
@@ -31,7 +31,7 @@ async.series(
     function (cb) {
       db.autoupdate(cb);
     },
-    importData.bind(null, app.models.note, notes),
+    importData.bind(null, app.models.note, notes)
   ], function (err, results) {
     if(err) {
       console.error(err);
