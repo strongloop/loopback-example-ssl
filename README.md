@@ -40,17 +40,19 @@ The code is in app.js.
       key: sslConfig.privateKey,
       cert: sslConfig.certificate
     };
+    ...
 
-    return https.createServer(options, app).listen(app.get('port'), function() {
-      var baseUrl = 'https://' + app.get('host') + ':' + app.get('port');
-      app.emit('started', baseUrl);
-      console.log('LoopBack server listening @ %s%s', baseUrl, '/');
+    server.listen(app.get('port'), function() {
+        var baseUrl = (httpOnly? 'http://' : 'https://') + app.get('host') + ':' + app.get('port');
+        app.emit('started', baseUrl);
+        console.log('LoopBack server listening @ %s%s', baseUrl, '/');
     });
+    return server;
 ```
 
 ## Start the application
 
-    node app
+    node server/server.js
 
 ## Open the API explorer
 
