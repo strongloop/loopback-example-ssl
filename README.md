@@ -58,5 +58,5 @@ The code is in app.js.
 
 ## References
 
-1. [http://nodejs.org/api/https.html][http://nodejs.org/api/https.html)
+1. [http://nodejs.org/api/https.html](http://nodejs.org/api/https.html)
 
