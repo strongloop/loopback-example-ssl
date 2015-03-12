@@ -1,7 +1,6 @@
 # loopback-example-ssl
 
-An example to demonstrate how to set up SSL for LoopBack applications so that
-the REST APIs can be called using https.
+An example to demonstrate how to set up SSL for LoopBack applications so you can call the REST APIs using HTTPS.
 
 ## Generate your own SSL certificate
 
@@ -14,7 +13,7 @@ the REST APIs can be called using https.
 
 ## Load the SSL certificate
 
-It's done in ssl-config.js.
+In `ssl-config.js`:
 
 ```js
 
@@ -25,9 +24,9 @@ It's done in ssl-config.js.
     exports.certificate = fs.readFileSync(path.join(__dirname, './private/certificate.pem')).toString();
 ```
 
-## Create the https server
+## Create the HTTPS server
 
-The code is in app.js.
+The code is in `app.js`:
 
 ```js
 
