@@ -1,6 +1,6 @@
 {
   "name": "loopback-example-ssl",
-  "version": "3.0.0",
+  "version": "2.1.0",
   "main": "server/server.js",
   "scripts": {
     "pretest": "jshint ."
