@@ -26,7 +26,7 @@ In `ssl-config.js`:
 
 ## Create the HTTPS server
 
-The code is in `app.js`:
+The code is in `server/server.js`:
 
 ```js
 
@@ -51,7 +51,7 @@ The code is in `app.js`:
 
 ## Start the application
 
-    node server/server.js
+    node ./server/server.js
 
 ## Open the API explorer
 
