@@ -5,7 +5,7 @@ An example to demonstrate how to set up SSL for LoopBack applications so you can
 ## Generate your own SSL certificate
 
 ```sh
-  cd private
+  cd loopback-example-ssl/server/private
   openssl genrsa -out privatekey.pem 1024
   openssl req -new -key privatekey.pem -out certrequest.csr
   openssl x509 -req -in certrequest.csr -signkey privatekey.pem -out certificate.pem
