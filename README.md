@@ -50,9 +50,9 @@ The code is in `server/server.js`:
 ```
 
 ## Start the application
-
+```sh
   $  node ./server/server.js
-
+```
 ## Open the API explorer
 
 [https://localhost:3000/explorer](https://localhost:3000/explorer)
