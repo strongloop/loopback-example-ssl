@@ -1,6 +1,6 @@
 {
   "name": "loopback-example-ssl",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "main": "server/server.js",
   "scripts": {
     "pretest": "jshint ."
@@ -9,8 +9,8 @@
     "async": "~0.9.0",
     "compression": "^1.0.3",
     "errorhandler": "^1.1.1",
-    "loopback": "^2.0.0",
-    "loopback-boot": "^2.0.0",
+    "loopback": "^2.14.0",
+    "loopback-boot": "^2.6.5",
     "loopback-datasource-juggler": "^2.0.0",
     "serve-favicon": "^2.0.1"
   },

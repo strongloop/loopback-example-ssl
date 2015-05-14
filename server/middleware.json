@@ -1,0 +1,24 @@
+{
+  "initial:before": {
+    "loopback#favicon": {},
+    "loopback#compress": {}
+  },
+  "initial": {
+  },
+  "session": {
+  },
+  "auth": {
+  },
+  "parse": {
+  },
+  "routes": {
+  },
+  "files": {
+  },
+  "final": {
+    "loopback#urlNotFound": {}
+  },
+  "final:after": {
+    "loopback#errorHandler": {}
+  }
+}
