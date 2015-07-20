@@ -16,12 +16,10 @@ An example to demonstrate how to set up SSL for LoopBack applications so you can
 In `ssl-config.js`:
 
 ```js
-
-    var path = require('path'),
-        fs = require("fs");
-
-    exports.privateKey = fs.readFileSync(path.join(__dirname, './private/privatekey.pem')).toString();
-    exports.certificate = fs.readFileSync(path.join(__dirname, './private/certificate.pem')).toString();
+var path = require('path'),
+fs = require("fs");
+exports.privateKey = fs.readFileSync(path.join(__dirname, './private/privatekey.pem')).toString();
+exports.certificate = fs.readFileSync(path.join(__dirname, './private/certificate.pem')).toString();
 ```
 
 ## Create the HTTPS server
@@ -30,23 +28,23 @@ The code is in `server/server.js`:
 
 ```js
 
-    var https = require('https');
-    var sslConfig = require('./ssl-config');
+var https = require('https');
+var sslConfig = require('./ssl-config');
 
-    ...
+...
 
-    var options = {
-      key: sslConfig.privateKey,
-      cert: sslConfig.certificate
-    };
-    ...
+var options = {
+  key: sslConfig.privateKey,
+  cert: sslConfig.certificate
+};
+...
 
-    server.listen(app.get('port'), function() {
-        var baseUrl = (httpOnly? 'http://' : 'https://') + app.get('host') + ':' + app.get('port');
-        app.emit('started', baseUrl);
-        console.log('LoopBack server listening @ %s%s', baseUrl, '/');
-    });
-    return server;
+server.listen(app.get('port'), function() {
+    var baseUrl = (httpOnly? 'http://' : 'https://') + app.get('host') + ':' + app.get('port');
+    app.emit('started', baseUrl);
+    console.log('LoopBack server listening @ %s%s', baseUrl, '/');
+});
+return server;
 ```
 
 ## Start the application
