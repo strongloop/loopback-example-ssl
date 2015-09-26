@@ -2,6 +2,7 @@
   "name": "loopback-example-ssl",
   "version": "2.1.0",
   "main": "server/server.js",
+  "license": "MIT",
   "scripts": {
     "pretest": "jshint ."
   },
