@@ -59,3 +59,6 @@ return server;
 
 1. [http://nodejs.org/api/https.html](http://nodejs.org/api/https.html)
 
+---
+
+[More LoopBack examples](https://github.com/strongloop/loopback-example)
