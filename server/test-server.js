@@ -9,11 +9,11 @@ var notes = [
 ];
 
 for (var i = 0; i < 500; i++) {
-  notes.push({ author: 'Author' + i, title: 'Blog ' + i, content: 'Nice content ' + i, created: new Date(), modified: new Date() });
+  notes.push({ author: 'Author' + i, title: 'Blog ' + i,
+    content: 'Nice content ' + i, created: new Date(), modified: new Date() });
 }
 
 function importData(Model, data, cb) {
-
   // console.log('Importing data for ' + Model.modelName);
   Model.destroyAll(function(err) {
     if (err) {

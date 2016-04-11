@@ -4,7 +4,6 @@
   "main": "server/server.js",
   "license": "MIT",
   "scripts": {
-    "pretest": "jshint ."
     "lint": "eslint .",
     "posttest": "npm run lint"    
   },
