@@ -5,6 +5,8 @@
   "license": "MIT",
   "scripts": {
     "pretest": "jshint ."
+    "lint": "eslint .",
+    "posttest": "npm run lint"    
   },
   "dependencies": {
     "async": "~0.9.0",
@@ -17,6 +19,7 @@
     "serve-favicon": "^2.0.1"
   },
   "devDependencies": {
-    "jshint": "^2.8.0"
+    "eslint": "^2.7.0",
+    "eslint-config-loopback": "^1.0.0"
   }
 }
