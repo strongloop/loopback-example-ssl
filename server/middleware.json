@@ -1,9 +1,9 @@
 {
   "initial:before": {
-    "loopback#favicon": {},
-    "loopback#compress": {}
+    "loopback#favicon": {}
   },
   "initial": {
+    "compression": {}
   },
   "session": {
   },
@@ -22,6 +22,6 @@
     "loopback#urlNotFound": {}
   },
   "final:after": {
-    "loopback#errorHandler": {}
+    "strong-error-handler": {}
   }
 }
