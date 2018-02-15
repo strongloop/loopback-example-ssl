@@ -11,8 +11,8 @@
     "async": "~0.9.0",
     "compression": "^1.6.2",
     "loopback": "^3.0.0",
-    "loopback-boot": "^2.6.5",
-    "loopback-component-explorer": "^2.1.0",
+    "loopback-boot": "^3.0.0",
+    "loopback-component-explorer": "^5.0.0",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^1.1.1"
   },
