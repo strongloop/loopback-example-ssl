@@ -19,5 +19,6 @@
   "devDependencies": {
     "eslint": "^2.7.0",
     "eslint-config-loopback": "^1.0.0"
-  }
+  },
+  "author": "IBM Corp."
 }
