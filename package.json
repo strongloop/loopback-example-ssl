@@ -2,9 +2,13 @@
   "name": "loopback-example-ssl",
   "version": "2.1.0",
   "main": "server/server.js",
+  "engines": {
+    "node": ">=8"
+  },
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "posttest": "npm run lint"
   },
   "dependencies": {
@@ -17,8 +21,8 @@
     "strong-error-handler": "^3.2.0"
   },
   "devDependencies": {
-    "eslint": "^2.7.0",
-    "eslint-config-loopback": "^1.0.0"
+    "eslint": "^6.1.0",
+    "eslint-config-loopback": "^13.1.0"
   },
   "author": "IBM Corp."
 }
