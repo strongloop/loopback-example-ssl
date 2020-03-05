@@ -1,5 +1,7 @@
 # loopback-example-ssl
 
+**⚠️ This LoopBack 3 example project is no longer maintained. Please refer to [LoopBack 4 Examples](https://loopback.io/doc/en/lb4/Examples.html) instead. ⚠️**
+
 An example to demonstrate how to set up SSL for LoopBack applications so you can call the REST APIs using HTTPS.
 
 ## Generate your own SSL certificate
